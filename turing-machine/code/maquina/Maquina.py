@@ -1,4 +1,4 @@
-from Arquivo import Arquivo
+from Arquivo import Leitor
 from Operacao import Operacao
 from Fita import Fita
 
@@ -18,7 +18,7 @@ class Maquina:
         return self.Operacao.existEstado()
 
     def carregamento(self, caminhoDoArquivo):
-        estados = Arquivo(caminhoDoArquivo)
+        estados = Leitor(caminhoDoArquivo)
         self.Operacao.setEstados(estados)
 
     def inserirFita(self, entrada_fita):
@@ -27,9 +27,9 @@ class Maquina:
     def print_informacao_atual(self, Fita, estado_atual_nome, qtdPassos):
         print("Estado atual: %s - Posicao: %d - Passos: %d" % (estado_atual_nome, Fita.simbolo_topo, qtdPassos))
 
-    def print_informacao_fita(self, Fita):
-        print("Fita -> \n" + (Fita.simbolo_topo)
-        print(Fita)
+    def print_informacao_fita(self, fita):
+        print("Fita -> \n" + Fita.simbolo_topo())
+        print(fita)
 
     def verifica_parada(self, nome_ProxEstado, Fita, qtdPassos):
 
