@@ -58,5 +58,5 @@ class Fita(object):
     def info(self):
         return str(self.elementos)
 
-    def str(self):
+    def strInfo(self):
         return " ".join(self.elementos).replace("_", " ")

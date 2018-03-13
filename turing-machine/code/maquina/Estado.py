@@ -16,7 +16,7 @@ class Estado(object):
         self.direcao=direcao
         self.proximo_estado=proximo_estado
 
-    def str(self):
+    def strInfo(self):
         return "Estado atual %s" % self.nome
 
     def info(self):
