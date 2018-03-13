@@ -24,6 +24,9 @@ class Maquina:
     def inserirFita(self, entrada_fita):
         self.Fita.inserirFita(entrada_fita)
 
+    def print_info_atual(self, Fita, estado_atual_nome, qtdPassos):
+        print("Estado atual: %s - Posicao: %d - Passos: %d" % (estado_atual_nome, Fita.simbolo_topo, qtdPassos))
+
     def startMaquina(self):
 
         qtdPassos = 0
@@ -31,4 +34,5 @@ class Maquina:
 
         while True:
 
-                    
+            if estado_atual is not None:
+                self.print_info_atual(self.Fita, estado_atual.nome, qtdPassos)
