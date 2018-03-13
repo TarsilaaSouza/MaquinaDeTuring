@@ -1,6 +1,6 @@
 #coding-utf-8
 
-from visual import View
+from VisualManipulate import View
 
 def main():
     visualizacao = View
