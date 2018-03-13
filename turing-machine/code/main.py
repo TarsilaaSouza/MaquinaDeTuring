@@ -1,9 +1,9 @@
 #coding-utf-8
 
-from visualUser.visual import visualUser
+from visual import View
 
 def main():
-    visualizacao = visualUser
+    visualizacao = View
     visualizacao.go()
 
 if __name__ == "__main__":
