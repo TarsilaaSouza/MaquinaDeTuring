@@ -1,5 +1,5 @@
 import time
-from manager import Manager
+from Administrator import Administrator
 
 OPTIONS = "\n" + "="*61 + "\nPress 'I' to import a program, or 'C' to close the simulator: "
 
