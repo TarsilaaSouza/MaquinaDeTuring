@@ -14,6 +14,9 @@ class Fita(object):
     def get_Fita(self):
         return self.elementos
 
+    def apontador(self):
+        return self.apontador
+
     def simbolo_topo(self):
         return self.elementos[self.apontador]
 
@@ -48,7 +51,7 @@ class Fita(object):
     def ponteiro(self):
         indicador = ""
         for e in range(len(self.elementos)):
-            if e == apontador:
+            if e == self.apontador:
                 indicador += 1
             else:
                 indicador += " "

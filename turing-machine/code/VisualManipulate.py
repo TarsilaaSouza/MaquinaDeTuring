@@ -13,10 +13,10 @@ class VisualUser:
 
             TEXTO_INICIAL = "Pressione uma opcao abaixo para executar um programa, ou E para fechar o simulador:"
 
-            option = raw_input(TEXTO_INICIAL)
+            option = raw_input(TEXTO_INICIAL + " ")
 
             if option.lower() == '1':
-                path = "programas/palindrome_detector.in"
+                path = "programas\palindrome_detector.in"
                 if self.validade_path(path):
                     tape = self.get_input_word()
                     self.Manager.carregar_maquina(path, tape)

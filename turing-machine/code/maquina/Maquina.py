@@ -25,10 +25,10 @@ class Maquina:
         self.Fita.inserir(entrada_fita)
 
     def print_informacao_atual(self, Fita, estado_atual_nome, qtdPassos):
-        print("Estado atual: %s - Posicao: %d - Passos: %d" % (estado_atual_nome, Fita.simbolo_topo, qtdPassos))
+        print("Estado atual: %s - Posicao: %d - Passos: %d" % (estado_atual_nome, Fita.simbolo_inicial(), qtdPassos))
 
     def print_informacao_fita(self, fita):
-        print("Fita -> \n" + Fita.simbolo_topo())
+        print("Fita -> \n" + Fita.ponteiro())
         print(fita)
 
     def verifica_parada(self, nome_ProxEstado, Fita, qtdPassos):
@@ -49,7 +49,7 @@ class Maquina:
     def startMaquina(self):
 
         qtdPassos = 0
-        estado_atual = self.Operacao.proxEstado(ESTADO_INICIAL, self.Fita.simbolo_topo)
+        estado_atual = self.Operacao.proxEstado(ESTADO_INICIAL, self.Fita.simbolo_topo())
 
         while True:
 
