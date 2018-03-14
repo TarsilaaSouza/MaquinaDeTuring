@@ -17,7 +17,7 @@ def lerArquivo(caminho):
             linha = linha.split(" ")
             linha[-1] = linha[-1].strip("\n")
             estado = Estado(linha[0], linha[1], linha[2], linha[3], linha[4])
-            estados_gerados[(estado.nome, estado.simbolo)] = estado_gerado
+            estados_gerados[(estado.nome, estado.simbolo)] = estado
 
     arquivo.close()
 

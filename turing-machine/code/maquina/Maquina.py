@@ -11,7 +11,7 @@ REJEICAO = 'halt-reject'
 class Maquina:
 
     def __init__(self, Fita=Fita(), Operacao=Operacao()):
-        self.Fita = Fitaestados = lerArquivo(caminhoDoArquivo)
+        self.Fita = Fita
         self.Operacao = Operacao
 
     def existPrograma(self):
@@ -22,7 +22,7 @@ class Maquina:
         self.Operacao.setEstados(estados)
 
     def inserirFita(self, entrada_fita):
-        self.Fita.inserirFita(entrada_fita)
+        self.Fita.inserir(entrada_fita)
 
     def print_informacao_atual(self, Fita, estado_atual_nome, qtdPassos):
         print("Estado atual: %s - Posicao: %d - Passos: %d" % (estado_atual_nome, Fita.simbolo_topo, qtdPassos))
