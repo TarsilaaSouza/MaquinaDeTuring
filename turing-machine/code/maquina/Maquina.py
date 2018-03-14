@@ -66,5 +66,5 @@ class Maquina:
                 estado_atual = self.Operacao.proxEstado(estado_auxiliar.proximo_estado, self.Fita.simbolo_topo)
 
             else:
-                print ("---> FINALIDADO! <---")
+                print ("---> FINALIZADO! <---")
                 break

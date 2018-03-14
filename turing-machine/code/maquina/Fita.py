@@ -1,4 +1,3 @@
-
 # codificao dos simbolos
 
 SEM_ESCRITA = '_'
@@ -24,7 +23,7 @@ class Fita(object):
     def inserir(self, entrada):
         self.elementos=[]
         self.elementos.append(SEM_ESCRITA)
-        self.elementos += list(input.replace(" ", SEM_ESCRITA))
+        self.elementos += list(entrada.replace(' ', SEM_ESCRITA))
         self.elementos.append(SEM_ESCRITA)
 
     def mover(self, direcao):
