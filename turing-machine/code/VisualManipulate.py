@@ -1,7 +1,5 @@
 import time
-from Administrator import Administrator
-
-OPTIONS = "\n" + "="*61 + "\nPress 'I' to import a program, or 'C' to close the simulator: "
+from Administrator import Manager
 
 class VisualUser:
 
@@ -9,9 +7,14 @@ class VisualUser:
         self.manager = Manager()
 
     def start(self):
-        self.print_header()
+
+        self.print_inicio()
+
         while True:
-            option = raw_input(OPTIONS)
+
+            TEXTO_INICIAL = "Pressione uma opcao para executar um programa, ou E para sair:"
+
+            option = raw_input(TEXTO_INICIAL)
 
             if option.lower() == 'i':
                 path = self.get_program_path()
@@ -21,26 +24,33 @@ class VisualUser:
                 else:
                     print ("Wrong program path!!!")
 
-            elif option.lower() == 'c':
-                print ("Closing simulator...")
+            elif option.lower() == 'e':
+                print ("Fechando...")
                 time.sleep(0.5)
                 break
             else:
                 print ("Invalid option")  # to do: exception
 
-    def print_header(self):
+    def print_inicio(self):
         instrucoes = "=== Projeto Turing Simulator - Teoria da Computacao 2017.2 ===\n" \
-                 "Instrucoes: \n" \
-                 "\tEach line of the file must follow this pattern (separated by spaces): <current state> <current symbol> <new symbol> <direction> <new state>\n" \
-                 "\tYou can use any number or word for <current state> and <new state>, eg. 10, a, state1  (state labels are case-sensitive).\n" \
-                 "\tYou can use any character for <current symbol> and <new symbol>, or '_' to represent blank (space)  (symbols are case-sensitve).\n" \
-                 "\t<direction> should be 'l', 'r' or '*', denoting 'move left', 'move right' or 'do not move', respectively.\n" \
-                 "\tAnything after a ';' is a comment.\n" \
-                 "\tThe machine halts when it reaches any state starting with 'halt', eg. halt, halt-accept."
+                 "Instrucoes:
+                 "
         print instrucoes
 
+    def opcoes(self):
+        opcoes = "1 - Palindromo \n" \
+                "2 - Adicao de binario \n" \
+                "3 - Multiplicacao de binario"
+                "4 - Checar parenteses"
+                "5 - Expressao boleana em notacao polonesa"
+                "6 - Turing Sequence Machine"
+                "7 - Universal Turing Machine"
+                "8 - Numero Primo em binario"
+                "9 - 4 State busy beaver"
+                "10 - Binario para decimal"
+
     def get_program_path(self):
-        print ("> Write the path of the file containing the commands and press 'Enter':")
+        print ("> Escolha a funcao da maquina e pressione enter:")
         path = raw_input()
         return path
 

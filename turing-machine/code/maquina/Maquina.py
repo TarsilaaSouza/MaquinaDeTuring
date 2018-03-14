@@ -1,4 +1,4 @@
-from Arquivo import Leitor
+from Arquivo import lerArquivo
 from Operacao import Operacao
 from Fita import Fita
 
@@ -11,14 +11,14 @@ REJEICAO = 'halt-reject'
 class Maquina:
 
     def __init__(self, Fita=Fita(), Operacao=Operacao()):
-        self.Fita = Fita
+        self.Fita = Fitaestados = lerArquivo(caminhoDoArquivo)
         self.Operacao = Operacao
 
     def existPrograma(self):
         return self.Operacao.existEstado()
 
     def carregamento(self, caminhoDoArquivo):
-        estados = Leitor(caminhoDoArquivo)
+        estados = lerArquivo(caminhoDoArquivo)
         self.Operacao.setEstados(estados)
 
     def inserirFita(self, entrada_fita):

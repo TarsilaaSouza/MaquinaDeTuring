@@ -35,7 +35,7 @@ class Fita(object):
             else:
                 self.apontador += 1
 
-        if direcao = ESQUERDA:
+        if direcao == ESQUERDA:
             if self.apontador == 0:
                 self.elementos = [SEM_ESCRITA] + self.elementos
                 self.apontador = 0

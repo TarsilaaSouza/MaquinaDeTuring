@@ -1,10 +1,10 @@
 #coding-utf-8
 
-from VisualManipulate import View
+from VisualManipulate import VisualUser
 
 def main():
-    visualizacao = View
-    visualizacao.go()
+    visualizacao = VisualUser()
+    visualizacao.start()
 
 if __name__ == "__main__":
     main()
